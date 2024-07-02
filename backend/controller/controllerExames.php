@@ -9,7 +9,7 @@ class controllerExames{
             return false;
         }
     }
-    public function cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame,$data_solicitacao){
+    public function cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame){
         try{
             $modelExames = new modelExames();
             return $modelExames->cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame,);
