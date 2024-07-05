@@ -4,7 +4,6 @@ class controllerExames{
         try{
             $modelExames = new modelExames();
             return $modelExames->listarExames();
-             
         } catch(PDOException $e){
             return false;
         }
@@ -12,7 +11,7 @@ class controllerExames{
     public function cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame){
         try{
             $modelExames = new modelExames();
-            return $modelExames->cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame,);
+            return $modelExames->cadastrarExames($id_prontuario,$id_funcionario_solicitiante,$id_procedimentos_exame);
 
         } catch(PDOException $e){
             return false;

@@ -11,12 +11,12 @@ class modelProcedimentoExame{
         }
     }
 
-    public function cadastrarProcedimento($id_tipos_procedimento,$id_procedimento_exames){
+    public function cadastrarProcedimento($id_tipos_procedimento,$id_exames){
         try{
             $pdo = Database::conexao();
-            $stmt = $pdo->prepare("INSERT INTO tbl_procedimentos_exames (id_tipos_procedimento,id_procedimento_exames) VALUES (:id_tipos_procedimento,:id_procedimento_exames)");
+            $stmt = $pdo->prepare("INSERT INTO tbl_procedimentos_exames (id_tipos_procedimento,id_exame) VALUES (:id_tipos_procedimento,:id_exames)");
             $stmt->bindParam("id_tipos_procedimento",$id_tipos_procedimento);
-            $stmt->bindParam("id_procedimento_exames",$id_procedimento_exames);
+            $stmt->bindParam("id_exame",$id_exames);
             $stmt->execute();
             
             return true;
